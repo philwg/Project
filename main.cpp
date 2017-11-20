@@ -128,17 +128,17 @@ struct BezierMatrix
 
 
 /* ------------------------------------------------------------------- */
-/*				Les variables globales de la classe			   		   */
+/*		Les variables globales de la classe		       */
 /* ------------------------------------------------------------------- */
 const float CatmullRomMatrix[4][4] { 0.0f,  1.0f,  0.0f,  0.0f,
-					  				-0.5f,  0.0f,  0.5f,  0.0f,
-									 1.0f, -2.5f,  2.0f, -0.5f,
-					   				-0.5f,  1.5f,  -1.5f, 0.5f};
+				    -0.5f,  0.0f,  0.5f,  0.0f,
+				     1.0f, -2.5f,  2.0f, -0.5f,
+				    -0.5f,  1.5f,  -1.5f, 0.5f};
 BezierMatrix BM;
 bool BMatrixOn {false};
 
 int selected {-1};
-int action 	  {0};
+int action    {0};
 
 float pickingPrecision {10.0f};
 float displayScale      {1.0f};
@@ -153,8 +153,8 @@ vector<Point> ctrlPoints;
 /*	Définition des variables concernant la fenêtre d'affichage	*/
 int dispWdwHeight {1000};	
 int dispWdwWidth  {1000};
-int dispWdwXpos		{50};
-int dispWdwYpos		{50};
+int dispWdwXpos	    {50};
+int dispWdwYpos	    {50};
 
 /*	Definition des variables de glOrtho (projection orthogonale)	*/
 int orthoHeight {dispWdwHeight};
@@ -172,7 +172,7 @@ float ScvColor[]  { 0.96f, 0.0f,  0.96f};
 float CRcvColor[] { 0.0f,  0.96f, 0.96f};
 
 /*---------------------------------------------------------------------*/
-/* 				Prototypes des fonctions & main()					   */
+/* 		Prototypes des fonctions & main()		       */
 /*---------------------------------------------------------------------*/
 
 int Pascal(int i, int n);
@@ -231,7 +231,7 @@ int main(int argc, char** argv) //........................... Fonction de lancem
 
 
 /* ------------------------------------------------------------------- */
-/*					Fonctions de calcul de courbes				       */
+/*			Fonctions de calcul de courbes		       */
 /* ------------------------------------------------------------------- */
 
 int Pascal(int i, int n)
@@ -296,7 +296,7 @@ Point CatmullRomPW(float t, vector<Point> CR_4Pts)
 
 
 /* ------------------------------------------------------------------- */
-/*					Fonctions display d'OpenGL					       */
+/*		Fonctions display d'OpenGL			       */
 /* ------------------------------------------------------------------- */
 
 void renderBitmapString(float x, float y, void *font, const char *string)
@@ -429,7 +429,7 @@ void display()	//------------------------------------------- Gestion de l'affich
 
 
 /* ------------------------------------------------------------------- */
-/*					Fonctions de Gestion de la Souris			       */
+/*		Fonctions de Gestion de la Souris		       */
 /* ------------------------------------------------------------------- */
 
 void mouse(int mButton, int mState, int x, int y)	//------- Gestion du clic de la souris
@@ -686,7 +686,7 @@ void menu(int item)	//--------------------------------------- Gestion des action
 
 
 /* ------------------------------------------------------------------- */
-/*				Fonction de Gestion des saisies clavier		       	   */
+/*		Fonction de Gestion des saisies clavier		       */
 /* ------------------------------------------------------------------- */
 
 void zoomIO(float d)	//----------------------------------- Mise à jour des paramètres de zoom
@@ -735,7 +735,7 @@ void keyboard(unsigned char touche, int x, int y)	//------- Gestion des saisies 
 
 
 /* ------------------------------------------------------------------- */
-/*							Fonction IDLE						       */
+/*			Fonction IDLE				       */
 /* ------------------------------------------------------------------- */
 
 void idle()
@@ -747,7 +747,7 @@ void idle()
 
 
 /* ------------------------------------------------------------------- */
-/*					Fonction de Redimensionnement				       */
+/*			Fonction de Redimensionnement		       */
 /* ------------------------------------------------------------------- */
 
 void reshape(int width, int height)
